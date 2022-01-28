@@ -8,8 +8,8 @@ nltk.download('stopwords')
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 
-vec_file=pickle.load(open('C:/Users/vinis/Sentiment-Analysis/Deployment/vectorizer.sav','rb'))
-model_2=pickle.load(open('C:/Users/vinis/Sentiment-Analysis/Deployment/Example2.sav','rb'))
+vec_file=pickle.load(open('vectorizer.sav','rb'))
+model_2=pickle.load(open('Example2.sav','rb'))
 
 def predict_sentiment(sample_review):
     sample_review = re.sub(pattern='[^a-zA-Z]',repl=' ', string = sample_review)
